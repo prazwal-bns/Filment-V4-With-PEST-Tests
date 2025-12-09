@@ -23,9 +23,4 @@ class Dashboard extends BaseDashboard
     {
         return '';
     }
-
-    public static function getNavigationIcon(): string|Htmlable|null
-    {
-        return null; // Customize as needed
-    }
 }
