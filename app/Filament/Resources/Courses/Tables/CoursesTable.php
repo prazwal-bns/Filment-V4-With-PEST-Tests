@@ -24,24 +24,24 @@ class CoursesTable
                     ->numeric()
                     ->badge()
                     ->sortable(),
-                // TextColumn::make('department.name')
-                //     ->badge()
-                //     ->color('secondary')
-                //     ->sortable(),
-
-                ActionableColumn::make('department.name')
-                    ->label('Department')
+                TextColumn::make('department.name')
                     ->badge()
                     ->color('secondary')
-                    ->tapAction(Action::make('viewDepartment')
-                        ->label('View Department')
-                        ->icon('heroicon-o-eye')
-                        ->action(function ( $record, array $data, $livewire): void {
-                            // Redirect to the department resource page
-                            redirect(DepartmentResource::getUrl('view', ['record' => $record]));
-                        })
-                    )
                     ->sortable(),
+
+                // ActionableColumn::make('department.name')
+                //     ->label('Department')
+                //     ->badge()
+                //     ->color('secondary')
+                //     ->tapAction(Action::make('viewDepartment')
+                //         ->label('View Department')
+                //         ->icon('heroicon-o-eye')
+                //         ->action(function ( $record, array $data, $livewire): void {
+                //             // Redirect to the department resource page
+                //             redirect(DepartmentResource::getUrl('view', ['record' => $record]));
+                //         })
+                //     )
+                //     ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
